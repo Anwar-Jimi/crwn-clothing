@@ -1,7 +1,6 @@
-import firebase from "firebase/app";
-import "firebase/firestore";
-import "firebase/auth";
-
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 const config = {
     apiKey: "AIzaSyAsfzLGzpPoxbk6hDY3iQ0aHM3VcDgHCFc",
     authDomain: "crwn-db-a61f5.firebaseapp.com",
@@ -12,7 +11,7 @@ const config = {
     measurementId: "G-9XY3JRREMM"
   };
 
-  firebase.intializeApp(config);
+  firebase.initializeApp(config);
 
   export const auth = firebase.auth();
   export const firestore = firebase.firestore();
@@ -21,4 +20,4 @@ const config = {
   provider.setCustomParameters({ prompt: 'select_account' });
   export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
-  export default firebase;
+export default firebase;
