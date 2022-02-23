@@ -32,7 +32,7 @@ const Header = ({ currentUser, hidden }) => (
                 SIGN OUT
             </div>
             ) : (
-            <Link className="OPTION" to="/signin">
+            <Link className="option" to="/signin">
                 SIGN IN
             </Link>
             )}
@@ -40,8 +40,7 @@ const Header = ({ currentUser, hidden }) => (
 
     </div>
     {
-        hidden ? null :
-         <CartDropdown />
+        hidden ? null : <CartDropdown />
     }
    
     </div>
